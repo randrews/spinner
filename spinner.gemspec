@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   # s.rdoc_options = ["--inline-source", "--charset=UTF-8"]
   # s.require_paths = ["lib"]
   s.rubyforge_project = %q{spinner}
-  s.rubygems_version = %q{1.3.0}
+  # s.rubygems_version = %q{1.3.0}
   s.summary = %q{Spinner is a Ruby library for displaying an animated spinner during long-running tasks.}
 
   if s.respond_to? :specification_version then
