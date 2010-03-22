@@ -1,0 +1,27 @@
+h1. Spinner
+
+Display a spinning text widget during a long-running process in your app
+
+h2. Basic use
+
+Call @Spinner::with_spinner@, and pass it a block:
+
+<pre>Spinner::with_spinner do |spin|
+    30.times do
+        sleep 0.1
+        spin.call
+    end
+end</pre>
+
+Each time you call @spin.call@ in the block, it will animate the spinner.
+
+h2. Advanced use
+
+You can specify the message it displays, and cause it to display a percentage of completion, by passing a couple options:
+
+<pre>Spinner::with_spinner(:count=>1000, :message=>"Processing files...") do |spin|
+    1000.times do |file|
+        # ... do something ...
+        spin.call
+    end
+end</pre>
